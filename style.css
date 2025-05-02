@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  .post, .reply {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+  
+  .reply {
+    margin-left: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  button {
+    margin-right: 5px;
+  }
+  
+  textarea {
+    width: 100%;
+    margin-bottom: 10px;
+  }
