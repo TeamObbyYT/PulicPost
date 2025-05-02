@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mini Twitter</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <h2>Create a Post</h2>
-  <textarea id="postText" placeholder="What's happening?"></textarea>
-  <button onclick="createPost()">Post</button>
+  <div class="container">
+    <h1>Mini Twitter</h1>
+    
+    <!-- Display User Info -->
+    <div id="userArea"></div>
 
-  <h2>Posts</h2>
-  <div id="postsContainer"></div>
+    <!-- Create Post Section -->
+    <h2>Create a Post</h2>
+    <textarea id="postText" placeholder="What's happening?" maxlength="280"></textarea>
+    <button onclick="createPost()" id="postBtn">Post</button>
+
+    <!-- Posts Section -->
+    <h2>Posts</h2>
+    <div id="postsContainer"></div>
+  </div>
 
   <script src="script.js"></script>
 </body>

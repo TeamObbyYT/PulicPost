@@ -1,26 +1,135 @@
-body {
-    font-family: Arial, sans-serif;
-    max-width: 600px;
-    margin: 20px auto;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
   
-  .post, .reply {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 8px;
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
   }
   
-  .reply {
-    margin-left: 20px;
-    background-color: #f9f9f9;
+  .container {
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
   
-  button {
-    margin-right: 5px;
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
   }
   
   textarea {
     width: 100%;
-    margin-bottom: 10px;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    resize: none;
+    margin-bottom: 20px;
   }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background-color: #1da1f2;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0d8cd9;
+  }
+  
+  button:disabled {
+    background-color: #b8d7ea;
+    cursor: not-allowed;
+  }
+  
+  #postsContainer {
+    margin-top: 20px;
+  }
+  
+  .post, .reply {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: box-shadow 0.2s ease;
+  }
+  
+  .post:hover, .reply:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post .user, .reply .user {
+    background-color: #1da1f2;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+  }
+  
+  .post .content, .reply .content {
+    flex: 1;
+  }
+  
+  button.edit, button.delete {
+    margin-left: 10px;
+    font-size: 14px;
+    background-color: #ff5b5b;
+    color: white;
+    border-radius: 6px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button.edit:hover, button.delete:hover {
+    background-color: #e04b4b;
+  }
+  
+  textarea:focus {
+    outline: none;
+    border-color: #1da1f2;
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      padding: 15px;
+    }
+  
+    textarea {
+      height: 80px;
+    }
+  
+    button {
+      font-size: 14px;
+      width: 100%;
+    }
+  }
+  
